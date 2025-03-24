@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { DUMMY_NEWS } from '../../dummy-news';
-import Image from 'next/image';
 
 export default function NewsPage() {
   return (
@@ -10,13 +9,10 @@ export default function NewsPage() {
         {DUMMY_NEWS.map((el) => {
           return (
             <li key={el.id}>
-              <Link href={`/news/${el.slug}`}>{el.title}</Link>
-              <Image
-                src={`/images/news/${el.image}`}
-                alt={el.title}
-                width={40}
-                height={40}
-              />
+              <Link href={`/news/${el.slug}`}>
+                <img src={`/images/news/${el.image}`} alt={el.title} />
+                <span>{el.title}</span>
+              </Link>
             </li>
           );
         })}
