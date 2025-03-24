@@ -1,10 +1,10 @@
 type NewsParamProps = {
-  params: { slug: string };
+  params: { id: string };
 };
 export default function NewsItemPage({ params }: NewsParamProps) {
   return (
     <div id="home">
-      <h1>{params.slug}</h1>
+      <h1>{params.id}</h1>
     </div>
   );
 }
