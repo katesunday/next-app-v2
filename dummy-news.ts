@@ -1,4 +1,12 @@
-export const DUMMY_NEWS = [
+export type NewsType = {
+  id: string;
+  slug: string;
+  title: string;
+  image: string;
+  date: string;
+  content: string;
+};
+export const DUMMY_NEWS: NewsType[] = [
   {
     id: 'n1',
     slug: 'will-ai-replace-humans',
