@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function NewsList({ news }: { news: NewsType[] }) {
   return (
-    <>
+    <ul className="news-list">
       {news.map((el) => {
         return (
           <li key={el.id}>
@@ -15,6 +15,6 @@ export default function NewsList({ news }: { news: NewsType[] }) {
           </li>
         );
       })}
-    </>
+    </ul>
   );
 }
