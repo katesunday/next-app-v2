@@ -14,10 +14,10 @@ export default function MainHeader() {
       <nav>
         <ul>
           <li>
-            <NavLink title={'News'} href={'/news'} />
+            <NavLink href={'/news'}>News</NavLink>
           </li>
           <li>
-            <NavLink title={'Archive'} href={'/archive'} />
+            <NavLink href={'/archive'}>Archive</NavLink>
           </li>
         </ul>
       </nav>
