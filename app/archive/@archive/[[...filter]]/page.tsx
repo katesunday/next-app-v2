@@ -8,6 +8,7 @@ import {
 import Link from 'next/link';
 import { NewsType } from '../../../../dummy-news';
 import { notFound } from 'next/navigation';
+import FilterError from './error';
 
 export default function FilteredNewsPage({ params }) {
   const filter = params.filter;
@@ -35,7 +36,7 @@ export default function FilteredNewsPage({ params }) {
     (selectedMonth &&
       !getAvailableNewsMonths(selectedYear).includes(Number(selectedMonth)))
   ) {
-    notFound();
+    FilterError();
   }
 
   return (
