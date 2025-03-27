@@ -7,6 +7,7 @@ import {
 } from '../../../../lib/news';
 import Link from 'next/link';
 import { NewsType } from '../../../../dummy-news';
+import { notFound } from 'next/navigation';
 
 export default function FilteredNewsPage({ params }) {
   const filter = params.filter;
@@ -27,6 +28,14 @@ export default function FilteredNewsPage({ params }) {
 
   if (news && news.length > 0) {
     newsContent = <NewsList news={news} />;
+  }
+
+  if (
+    (selectedYear && !getAvailableNewsYears().includes(Number(selectedYear))) ||
+    (selectedMonth &&
+      !getAvailableNewsMonths(selectedYear).includes(Number(selectedMonth)))
+  ) {
+    notFound();
   }
 
   return (
