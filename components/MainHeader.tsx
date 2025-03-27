@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../assets/logo.jpg';
-import { useParams, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 export default function MainHeader() {
   const path = usePathname();
