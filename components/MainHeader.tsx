@@ -1,8 +1,11 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../assets/logo.jpg';
+import { useParams, usePathname } from 'next/navigation';
 
 export default function MainHeader() {
+  const path = usePathname();
   return (
     <header id="main-header">
       <div id="logo">
@@ -13,7 +16,20 @@ export default function MainHeader() {
       <nav>
         <ul>
           <li>
-            <Link href="/news">News</Link>
+            <Link
+              className={path.startsWith('/news') ? 'active' : undefined}
+              href="/news"
+            >
+              News
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={path.startsWith('/archive') ? 'active' : undefined}
+              href="/archive/"
+            >
+              Archive
+            </Link>
           </li>
         </ul>
       </nav>
