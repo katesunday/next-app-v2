@@ -12,7 +12,7 @@ export default function InterceptedImagePage({
   }
   return (
     <>
-      <h2>INTERCEPTED</h2>
+      <h2>INTERCEPTED!</h2>
       <div className="fullscreen-image">
         <img src={`/images/news/${item.image}`} alt={item.title} />
       </div>
