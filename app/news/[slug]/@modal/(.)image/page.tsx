@@ -11,11 +11,12 @@ export default function InterceptedImagePage({
     notFound();
   }
   return (
-    <>
-      <h2>INTERCEPTED!</h2>
-      <div className="fullscreen-image">
-        <img src={`/images/news/${item.image}`} alt={item.title} />
-      </div>
-    </>
+    <div className="modal-backdrop">
+      <dialog className="modal" open>
+        <div className="fullscreen-image">
+          <img src={`/images/news/${item.image}`} alt={item.title} />
+        </div>
+      </dialog>
+    </div>
   );
 }
