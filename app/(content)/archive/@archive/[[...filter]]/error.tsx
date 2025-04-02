@@ -1,5 +1,8 @@
 'use client';
-export default function FilterError({ error }: { error?: Error }) {
+interface ErrorType {
+  error?: Error;
+}
+export default function FilterError(error?: ErrorType) {
   return (
     <div id="error">
       <h2>An error occurred!</h2>

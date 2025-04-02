@@ -1,6 +1,6 @@
 'use client';
 import { notFound, useRouter } from 'next/navigation';
-import { DUMMY_NEWS } from '../../../../../dummy-news';
+import { DUMMY_NEWS } from '../../../../../../dummy-news';
 import React from 'react';
 
 export default function InterceptedImagePage(props: {

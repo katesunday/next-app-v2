@@ -1,13 +1,12 @@
-import NewsList from '../../../../components/NewsList';
+import NewsList from '../../../../../components/NewsList';
 import {
   getAvailableNewsMonths,
   getAvailableNewsYears,
   getNewsForYear,
   getNewsForYearAndMonth,
-} from '../../../../lib/news';
+} from '../../../../../lib/news';
 import Link from 'next/link';
-import { NewsType } from '../../../../dummy-news';
-import { notFound } from 'next/navigation';
+import { NewsType } from '../../../../../dummy-news';
 import FilterError from './error';
 
 export default function FilteredNewsPage({ params }) {
